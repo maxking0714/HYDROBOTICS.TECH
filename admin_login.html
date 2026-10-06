@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - HYDROBOTICS</title>
+    <link rel="stylesheet" href="css/theme.css">
+</head>
+<body data-page="admin-login">
+    <nav class="social-topbar">
+        <div class="nav-left social-brand-wrap">
+            <a class="logo" href="index.html">HYDROBOTICS</a>
+            <div class="nav-search">
+                <span>⌕</span>
+                <input type="text" placeholder="Search HYDROBOTICS" aria-label="Search HYDROBOTICS">
+            </div>
+        </div>
+        <div class="social-main-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="faq.html">FAQ</a>
+            <a href="feed.html">Social Feed</a>
+        </div>
+        <div class="nav-right social-actions">
+            <a id="authLink" class="btn-secondary" href="login.html">Login</a>
+        </div>
+    </nav>
+    <main class="page">
+        <section class="panel" style="max-width: 520px; margin: 2rem auto;">
+            <h1>Administrator Login</h1>
+            <div class="alert alert-error" role="note">Demo console only: admin credentials and authorization checks are exposed in client-side code. Do not use this login to protect real user data.</div>
+            <p class="text-muted">Use the platform administrator credentials to access moderation tools and review the audit trail.</p>
+            <div id="adminLoginAlert"></div>
+            <form id="adminLoginForm">
+                <div class="form-row">
+                    <label for="adminCode">Admin Code</label>
+                    <input id="adminCode" type="text" placeholder="hydro1234" required>
+                </div>
+                <div class="form-row">
+                    <label for="adminPassword">Password</label>
+                    <input id="adminPassword" type="password" placeholder="admin123" required>
+                </div>
+                <div class="form-actions">
+                    <button type="submit">Sign In</button>
+                    <a class="btn-secondary" href="index.html">Back to Home</a>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>HYDROBOTICS static demo for GitHub Pages. All preview pages share the same style and navigation structure.</p>
+        </div>
+    </footer>
+    <script src="js/site.js"></script>
+    <script src="js/admin-login.js"></script>
+</body>
+</html>

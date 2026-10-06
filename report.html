@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report a Safety Concern - HYDROBOTICS</title>
+  <link rel="stylesheet" href="css/theme.css">
+</head>
+<body data-page="report">
+  <nav>
+    <div class="nav-left"><a class="logo" href="index.html">HYDROBOTICS</a></div>
+    <div class="nav-right"><a class="btn-secondary" href="feed.html">Back to feed</a><a id="authLink" class="btn-secondary" href="login.html">Login</a></div>
+  </nav>
+  <main class="page">
+    <section class="container privacy-policy">
+      <p class="eyebrow">COMMUNITY SAFETY</p>
+      <h1>Report a safety concern</h1>
+      <p class="text-muted">Use this form for content or conduct that may violate the Terms of Service. Include enough context to locate and review it, but avoid adding unrelated personal or sensitive information.</p>
+      <div id="reportPageAlert" aria-live="polite"></div>
+      <form id="safetyReportForm" class="form-card">
+        <input id="reportType" type="hidden" value="platform">
+        <input id="reportReference" type="hidden" value="">
+        <div class="form-row">
+          <label for="safetyReportCategory">Reason for report</label>
+          <select id="safetyReportCategory" required>
+            <option value="">Choose a reason</option>
+            <option>Hate speech or discrimination</option>
+            <option>Harassment or cyberstalking</option>
+            <option>Threats or incitement to violence</option>
+            <option>Child safety or exploitation</option>
+            <option>Terrorism or violent propaganda</option>
+            <option>Illegal content</option>
+            <option>Defamation</option>
+            <option>Other safety concern</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="reportTarget">User or content being reported</label>
+          <input id="reportTarget" type="text" maxlength="200" placeholder="Username, post title, or conversation participant">
+        </div>
+        <div class="form-row">
+          <label for="safetyReportDetails">What happened?</label>
+          <textarea id="safetyReportDetails" required minlength="10" maxlength="3000" placeholder="Describe the content or behavior and when you saw it."></textarea>
+        </div>
+        <button type="submit">Submit Report</button>
+      </form>
+      <p class="text-muted small-note">Reports are stored in this browser's local storage and shown in the local admin review queue. This demo is not monitored and cannot promise a response time. If someone is in immediate danger, contact local emergency services.</p>
+      <p><a href="terms.html">Review the Terms of Service</a></p>
+    </section>
+  </main>
+  <footer><div class="container"><p>HYDROBOTICS static browser demo.</p></div></footer>
+  <script src="js/site.js"></script>
+</body>
+</html>

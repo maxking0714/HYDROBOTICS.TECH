@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings - HYDROBOTICS</title>
+  <link rel="stylesheet" href="css/theme.css">
+</head>
+<body data-page="settings">
+  <nav>
+    <div class="nav-left">
+      <a class="logo" href="index.html">HYDROBOTICS</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="feed.html">Social Feed</a></li>
+        <li><a href="account.html">Account</a></li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <span id="userChip" class="user-chip" hidden>Logged in</span>
+      <a id="authLink" class="btn-secondary" href="login.html">Login</a>
+    </div>
+  </nav>
+  <main class="page">
+    <section class="panel settings-header">
+      <h1 class="section-title">Settings</h1>
+      <p class="text-muted">Manage your account, preferences, and privacy in one place.</p>
+    </section>
+
+    <div class="settings-layout">
+      <aside class="settings-menu" aria-label="Settings sections">
+        <button class="settings-menu-item active" type="button" data-settings-section="personal-section">Personal information</button>
+        <button class="settings-menu-item" type="button" data-settings-section="password-section">Change password</button>
+        <button class="settings-menu-item" type="button" data-settings-section="report-section">Report content or a user</button>
+        <button class="settings-menu-item" type="button" data-settings-section="decisions-section">Moderation decisions</button>
+        <button class="settings-menu-item" type="button" data-settings-section="friends-section">Friends</button>
+        <button class="settings-menu-item" type="button" data-settings-section="privacy-section">Privacy</button>
+        <button class="settings-menu-item" type="button" data-settings-section="language-section">Language</button>
+        <button class="settings-menu-item" type="button" data-settings-section="support-section">Help and support</button>
+        <button class="settings-menu-item" type="button" data-settings-section="appearance-section">Dark mode</button>
+        <button class="settings-menu-item settings-logout" id="settingsLogout" type="button">Log out</button>
+      </aside>
+
+      <div class="settings-sections">
+        <div id="settingsMessage"></div>
+        <section class="panel settings-section active" id="personal-section">
+          <h2>Personal information</h2>
+          <p class="text-muted">Keep your profile details up to date.</p>
+          <form id="settingsForm" class="form-card">
+        <div class="form-row">
+          <label for="settingsGender">Gender</label>
+          <select id="settingsGender">
+            <option>Not specified</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="settingsAge">Age</label>
+          <input id="settingsAge" type="number">
+        </div>
+        <div class="form-row">
+          <label for="settingsLocation">Location</label>
+          <input id="settingsLocation" type="text">
+        </div>
+        <div class="form-row">
+          <label for="settingsEmail">Email</label>
+          <input id="settingsEmail" type="email">
+        </div>
+        <div class="form-row">
+          <label for="settingsPhone">Phone</label>
+          <input id="settingsPhone" type="tel">
+        </div>
+        <div class="form-actions">
+          <button type="submit">Save Changes</button>
+          <a class="btn-secondary" href="account.html">Back to Account</a>
+        </div>
+          </form>
+        </section>
+
+        <section class="panel settings-section" id="password-section">
+          <h2>Change password</h2>
+          <p class="text-muted">Choose a new password for your HYDROBOTICS account.</p>
+          <form id="passwordForm" class="form-card">
+            <div class="form-row"><label for="currentPassword">Current password</label><input id="currentPassword" type="password" required autocomplete="current-password"></div>
+            <div class="form-row"><label for="newPassword">New password</label><input id="newPassword" type="password" minlength="6" required autocomplete="new-password"></div>
+            <div class="form-row"><label for="confirmPassword">Confirm new password</label><input id="confirmPassword" type="password" minlength="6" required autocomplete="new-password"></div>
+            <button type="submit">Update Password</button>
+          </form>
+        </section>
+
+        <section class="panel settings-section" id="report-section"><h2>Report content or a user</h2><p class="text-muted">Report suspected hate speech, discrimination, harassment, threats, exploitation, illegal content, defamation, or another safety concern. For a specific feed post or chat, use its Report action to include the context.</p><form id="reportForm" class="form-card"><div class="form-row"><label for="reportCategory">Reason</label><select id="reportCategory" required><option value="">Choose a reason</option><option>Hate speech or discrimination</option><option>Harassment or cyberstalking</option><option>Threats or incitement to violence</option><option>Child safety or exploitation</option><option>Terrorism or violent propaganda</option><option>Illegal content</option><option>Defamation</option><option>Other safety concern</option></select></div><div class="form-row"><label for="reportTarget">User or content reference (optional)</label><input id="reportTarget" type="text" maxlength="200"></div><div class="form-row"><label for="reportDetails">What happened?</label><textarea id="reportDetails" required minlength="10" maxlength="3000" placeholder="Describe the concern and where it appeared. Do not include unnecessary personal information."></textarea></div><button type="submit">Submit Report</button></form></section>
+        <section class="panel settings-section" id="decisions-section"><h2>Moderation decisions</h2><p class="text-muted">Review active decisions affecting your account and appeal an eligible decision. An appeal is reviewed in the local admin console.</p><ul id="moderationDecisionList" class="notification-list"><li class="notification-item"><div><strong>No moderation decisions</strong></div></li></ul></section>
+        <section class="panel settings-section" id="friends-section"><h2>Friends</h2><p class="text-muted">Find your community connections and manage who you follow.</p><a class="btn" href="account.html">Open Account</a><a class="btn-secondary settings-inline-link" href="feed.html">Browse Social Feed</a></section>
+        <section class="panel settings-section" id="privacy-section"><h2>Privacy</h2><p class="text-muted">Personal information stays private on profiles, in feed posts, and in chat until an administrator verifies your identity and approves sharing.</p><p id="privacyReviewStatus" role="status">Personal details are private by default.</p><div class="form-actions"><button id="requestPrivacyReview" type="button">Request Review</button><a class="btn-secondary" href="#personal-section" data-settings-link="personal-section">Review Personal Information</a></div><p class="text-muted small-note">This demo does not collect identity documents. Complete verification with an administrator through a secure channel.</p><hr><h3>Activity tracking</h3><label class="settings-toggle"><input id="privacyTrackingToggle" type="checkbox"><span>Allow optional activity logging</span></label><p id="privacyTrackingStatus" class="text-muted" role="status">Optional activity tracking is off.</p><p class="text-muted small-note">When enabled, limited event summaries and the associated account name are stored in this browser for the admin activity log. Message text, passwords, email addresses, and profile values are not copied into that log.</p><p><a href="privacy.html">Read the Privacy Policy and Cookie Notice</a></p><button id="clearLocalData" class="btn-danger" type="button">Delete data stored in this browser</button></section>
+        <section class="panel settings-section" id="language-section"><h2>Language</h2><p class="text-muted">Choose the language for your account experience.</p><div class="form-row"><label for="settingsLanguage">Display language</label><select id="settingsLanguage"><option value="en">English</option><option value="es">Spanish</option><option value="fr">French</option></select></div><button id="saveLanguage" type="button">Save Language</button></section>
+        <section class="panel settings-section" id="support-section"><h2>Help and support</h2><p class="text-muted">Need a hand? Visit the FAQ or contact the HYDROBOTICS team.</p><a class="btn" href="faq.html">Open FAQ</a><a class="btn-secondary settings-inline-link" href="chat.html">Contact Support</a></section>
+        <section class="panel settings-section" id="appearance-section"><h2>Dark mode</h2><p class="text-muted">Adjust the appearance of this browser-based demo.</p><label class="settings-toggle"><input id="darkModeToggle" type="checkbox"><span>Use dark mode</span></label></section>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <p>HYDROBOTICS static demo for GitHub Pages. Settings are saved locally in the browser.</p>
+    </div>
+  </footer>
+  <script src="js/site.js"></script>
+</body>
+</html>
