@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat - HYDROBOTICS</title>
+  <link rel="stylesheet" href="css/theme.css">
+</head>
+<body data-page="chat">
+  <nav class="social-topbar">
+    <div class="nav-left social-brand-wrap">
+      <a class="logo" href="index.html">HYDROBOTICS</a>
+      <div class="nav-search"><span>⌕</span><input type="search" placeholder="Search HYDROBOTICS" aria-label="Search HYDROBOTICS"></div>
+    </div>
+    <div class="social-main-nav">
+      <a href="feed.html">Home</a><a href="inventor.html">Inventors</a><a href="dashboard.html">Dashboard</a><a href="settings.html">Settings</a>
+    </div>
+    <div class="nav-right social-actions"><a class="mini-action active" href="chat.html" aria-label="Open chats" title="Open chats">💬</a><a id="authLink" class="btn-secondary" href="login.html">Login</a></div>
+  </nav>
+  <main class="page chat-page chat-list-page">
+    <div class="chat-page-heading"><div><p class="eyebrow">HYDROBOTICS Network</p><h1 class="section-title">Chats</h1><p class="text-muted">Keep project conversations in one place and find your next connection.</p></div><a class="btn-secondary" href="inventor-community.html">Find people</a></div>
+    <div id="chatAlert"></div>
+    <section class="chat-workspace">
+      <aside class="chat-directory panel">
+        <div class="chat-search"><label for="directorySearch">Search people and companies</label><input id="directorySearch" type="search" placeholder="Name, role, or company"></div>
+        <div class="chat-section"><div class="chat-section-heading"><h2>Messages</h2><span id="conversationCount" class="badge">0</span></div><div id="conversationList" class="conversation-list"></div></div>
+        <div class="chat-section"><div class="chat-section-heading"><h2>Contact requests</h2><span id="requestCount" class="badge">0</span></div><div id="requestList" class="request-list"></div></div>
+        <div class="chat-section"><div class="chat-section-heading"><h2>Discover</h2></div><div id="directoryResults" class="directory-results"></div></div>
+      </aside>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <p>HYDROBOTICS static demo for GitHub Pages. Conversations are saved locally in this browser.</p>
+    </div>
+  </footer>
+  <script src="js/site.js"></script>
+</body>
+</html>

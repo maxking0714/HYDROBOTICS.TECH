@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Post - HYDROBOTICS</title>
+  <link rel="stylesheet" href="css/theme.css">
+</head>
+<body data-page="create-post">
+  <nav class="social-topbar">
+    <div class="nav-left social-brand-wrap">
+      <a class="logo" href="index.html">HYDROBOTICS</a>
+      <div class="nav-search">
+        <span>⌕</span>
+        <input type="text" placeholder="Search HYDROBOTICS" aria-label="Search HYDROBOTICS">
+      </div>
+    </div>
+    <div class="social-main-nav">
+      <a href="feed.html">Home</a>
+      <a href="inventor.html">Inventors</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="settings.html">Settings</a>
+    </div>
+    <div class="nav-right social-actions">
+      <a class="mini-action" href="feed.html" aria-label="Back to feed" title="Back to feed">←</a>
+      <a class="mini-action" href="notifications.html" aria-label="View notifications" title="View notifications">🔔</a>
+      <a class="mini-action" href="chat.html" aria-label="Open chats" title="Open chats">💬</a>
+      <a id="authLink" class="btn-secondary" href="login.html">Login</a>
+    </div>
+  </nav>
+
+  <main class="page create-post-page">
+    <div class="container" style="max-width: 860px; margin: 0 auto;">
+      <div class="panel form-card">
+        <div class="section-head">
+          <h1>Create a post</h1>
+          <a href="feed.html">Back to feed</a>
+        </div>
+
+        <div class="upload-mode-row">
+          <button class="btn" id="openCameraBtn" type="button">Open Camera</button>
+          <button class="btn-secondary" id="selectFilesBtn" type="button">Select Files</button>
+          <input id="mediaInput" type="file" accept="image/*,video/*" hidden>
+        </div>
+
+        <div id="mediaPreview" class="media-preview">No media selected</div>
+
+        <form id="createPostForm">
+          <div class="form-row">
+            <label for="contentTitle">Post title</label>
+            <input id="contentTitle" type="text" required placeholder="Add a headline for your update">
+          </div>
+
+          <div class="form-row">
+            <label for="contentBody">Post content</label>
+            <textarea id="contentBody" rows="6" required placeholder="Share what you are working on, discoveries, or opportunities..."></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit">Publish</button>
+            <a class="btn-secondary" href="feed.html">Cancel</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/site.js"></script>
+  <script src="js/create-post.js"></script>
+</body>
+</html>

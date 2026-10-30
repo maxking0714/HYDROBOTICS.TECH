@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversation - HYDROBOTICS</title>
+  <link rel="stylesheet" href="css/theme.css">
+</head>
+<body data-page="chat-thread">
+  <nav class="social-topbar">
+    <div class="nav-left social-brand-wrap">
+      <a class="logo" href="index.html">HYDROBOTICS</a>
+      <div class="nav-search"><span>⌕</span><input type="search" placeholder="Search HYDROBOTICS" aria-label="Search HYDROBOTICS"></div>
+    </div>
+    <div class="social-main-nav">
+      <a href="feed.html">Home</a><a href="inventor.html">Inventors</a><a href="dashboard.html">Dashboard</a><a href="settings.html">Settings</a>
+    </div>
+    <div class="nav-right social-actions"><a class="mini-action active" href="chat.html" aria-label="Back to chats" title="Back to chats">💬</a><a id="authLink" class="btn-secondary" href="login.html">Login</a></div>
+  </nav>
+  <main class="page chat-thread-page">
+    <div class="thread-page-heading"><a class="back-link" href="chat.html">← Back to chats</a><p class="eyebrow">HYDROBOTICS Messages</p></div>
+    <section class="chat-thread panel" aria-label="Conversation">
+      <div id="emptyChat" class="empty-chat"><span class="empty-chat-icon">💬</span><h2>Starting conversation</h2><p class="text-muted">Loading your conversation...</p></div>
+      <div id="activeChat" hidden>
+        <header class="thread-header"><div class="avatar avatar-medium" id="threadAvatar">H</div><div><h1 id="threadName">HydroAdmin</h1><p id="threadMeta" class="text-muted">HYDROBOTICS team</p></div><a id="reportChatContact" class="btn-secondary" href="report.html?type=chat">Report conversation</a></header>
+        <div id="messageList" class="message-list"></div>
+        <div id="chatPrivacyAlert" role="status" aria-live="polite"></div><form id="messageForm" class="message-form"><label class="sr-only" for="messageInput">Message</label><input id="messageInput" placeholder="Write a message..."><label class="attachment-button" for="messageAttachment" title="Attach a document, image, or video" aria-label="Attach a document, image, or video">＋</label><input id="messageAttachment" class="sr-only" type="file" accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,image/*,video/*"><button type="submit" aria-label="Send message">Send</button></form>
+      </div>
+    </section>
+  </main>
+  <footer><div class="container"><p>HYDROBOTICS static demo for GitHub Pages. Conversations are saved locally in this browser.</p></div></footer>
+  <script src="js/site.js"></script>
+</body>
+</html>

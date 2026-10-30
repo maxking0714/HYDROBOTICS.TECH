@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - HYDROBOTICS</title>
+    <link rel="stylesheet" href="css/theme.css">
+</head>
+<body data-page="admin">
+    <nav class="social-topbar">
+        <div class="nav-left social-brand-wrap">
+            <a class="logo" href="index.html">HYDROBOTICS</a>
+            <div class="nav-search">
+                <span>⌕</span>
+                <input type="text" placeholder="Search HYDROBOTICS" aria-label="Search HYDROBOTICS">
+            </div>
+        </div>
+        <div class="social-main-nav">
+            <a href="feed.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="settings.html">Settings</a>
+            <a class="active" href="admin.html">Admin</a>
+        </div>
+        <div class="nav-right social-actions">
+            <a id="authLink" class="btn-secondary" href="admin_login.html">Admin Console</a>
+        </div>
+    </nav>
+
+    <main class="page admin-page">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+            <div class="section-head" style="margin-bottom: 1rem;">
+                <h1>Admin Control Center</h1>
+                <a href="feed.html">Return to feed</a>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-box"><strong id="adminStatUsers">0</strong>Users</div>
+                <div class="stat-box"><strong id="adminStatPosts">0</strong>Posts</div>
+                <div class="stat-box"><strong id="adminStatComplaints">0</strong>Complaints</div>
+                <div class="stat-box"><strong id="adminStatBlocked">0</strong>Blocked</div>
+            </div>
+
+            <div class="grid cards-2">
+                <div class="panel">
+                    <h3>Platform activity log</h3>
+                    <ul id="adminLogList" class="notification-list"></ul>
+                </div>
+                <div class="panel">
+                    <h3>Complaints</h3>
+                    <ul id="adminComplaintList" class="notification-list"></ul>
+                </div>
+            </div>
+
+            <div class="panel" style="margin-top: 1.5rem;">
+                <h3>Moderation appeals</h3>
+                <ul id="adminAppealList" class="notification-list"></ul>
+            </div>
+
+            <div class="panel" style="margin-top: 1.5rem;">
+                <h3>Moderation queue</h3>
+                <div id="adminModerationBody" class="moderation-grid"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>HYDROBOTICS static demo for GitHub Pages. This admin console is fully browser-side and audits platform events in local storage.</p>
+        </div>
+    </footer>
+    <script src="js/site.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>
